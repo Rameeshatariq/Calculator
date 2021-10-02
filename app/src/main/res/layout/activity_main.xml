@@ -45,7 +45,7 @@
         <Button
             android:id="@+id/btnDivide"
             android:text="/"
-            android:onClick="onDigit"
+            android:onClick="onOperator"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"></Button>
@@ -81,7 +81,7 @@
         <Button
             android:id="@+id/btnMultiply"
             android:text="*"
-            android:onClick="onDigit"
+            android:onClick="onOperator"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"></Button>
@@ -117,7 +117,7 @@
         <Button
             android:id="@+id/btnSubtract"
             android:text="-"
-            android:onClick="onDigit"
+            android:onClick="onOperator"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"></Button>
@@ -132,7 +132,7 @@
         <Button
             android:id="@+id/btnDecimal"
             android:text="."
-            android:onClick="onDigit"
+            android:onClick="onDecimalPoint"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"></Button>
@@ -153,7 +153,7 @@
         <Button
             android:id="@+id/btnAddition"
             android:text="+"
-            android:onClick="onDigit"
+            android:onClick="onOperator"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"></Button>
