@@ -67,6 +67,7 @@ class MainActivity : AppCompatActivity() {
 
                 }
 
+                //Subtraction
                 if(tvInput.text.contains("-")){
                     val spiltValue = tvValue.split("-")
                     var one = spiltValue[0]
@@ -78,7 +79,41 @@ class MainActivity : AppCompatActivity() {
                     tvInput.text = (one.toDouble() - two.toDouble()).toString()
                 }
 
+                //Addition
 
+               else if(tvInput.text.contains("+")){
+                    val spiltValue = tvValue.split("+")
+                    var one = spiltValue[0]
+                    var two = spiltValue[1]
+
+                    if(!prefix.isEmpty()){
+                        one = prefix + one
+                    }
+                    tvInput.text = (one.toDouble() + two.toDouble()).toString()
+                }
+                //Multiplication
+                else if(tvInput.text.contains("*")){
+                    val spiltValue = tvValue.split("*")
+                    var one = spiltValue[0]
+                    var two = spiltValue[1]
+
+                    if(!prefix.isEmpty()){
+                        one = prefix + one
+                    }
+                    tvInput.text = (one.toDouble() * two.toDouble()).toString()
+                }
+
+                //Division
+                else if(tvInput.text.contains("/")){
+                    val spiltValue = tvValue.split("/")
+                    var one = spiltValue[0]
+                    var two = spiltValue[1]
+
+                    if(!prefix.isEmpty()){
+                        one = prefix + one
+                    }
+                    tvInput.text = (one.toDouble() / two.toDouble()).toString()
+                }
             }
             catch (e: ArithmeticException){
                 e.printStackTrace()
@@ -88,6 +123,7 @@ class MainActivity : AppCompatActivity() {
 
 
     }
+
 
 
 
