@@ -76,7 +76,7 @@ class MainActivity : AppCompatActivity() {
                     if(!prefix.isEmpty()){
                         one = prefix + one
                     }
-                    tvInput.text = (one.toDouble() - two.toDouble()).toString()
+                    tvInput.text = removeZeroAfterDecimal((one.toDouble() - two.toDouble()).toString())
                 }
 
                 //Addition
@@ -89,7 +89,7 @@ class MainActivity : AppCompatActivity() {
                     if(!prefix.isEmpty()){
                         one = prefix + one
                     }
-                    tvInput.text = (one.toDouble() + two.toDouble()).toString()
+                    tvInput.text = removeZeroAfterDecimal((one.toDouble() + two.toDouble()).toString())
                 }
                 //Multiplication
                 else if(tvInput.text.contains("*")){
@@ -100,7 +100,7 @@ class MainActivity : AppCompatActivity() {
                     if(!prefix.isEmpty()){
                         one = prefix + one
                     }
-                    tvInput.text = (one.toDouble() * two.toDouble()).toString()
+                    tvInput.text = removeZeroAfterDecimal((one.toDouble() * two.toDouble()).toString())
                 }
 
                 //Division
@@ -112,7 +112,7 @@ class MainActivity : AppCompatActivity() {
                     if(!prefix.isEmpty()){
                         one = prefix + one
                     }
-                    tvInput.text = (one.toDouble() / two.toDouble()).toString()
+                    tvInput.text = removeZeroAfterDecimal((one.toDouble() / two.toDouble()).toString())
                 }
             }
             catch (e: ArithmeticException){
@@ -124,7 +124,12 @@ class MainActivity : AppCompatActivity() {
 
     }
 
-
+    private fun removeZeroAfterDecimal(result: String): String{
+        var value = result
+         if(result.contains(".0"))
+            value = result.substring(0, result.length - 2)
+        return value
+    }
 
 
 }
